@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RG Metals — Premium Door Hardware & Accessories</title>
+  <meta name="description" content="RG Metals offers premium door hinges, handles, and accessories. Explore our collection of high-quality door hardware crafted for durability and elegance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Floating 3D particles canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <rect x="2" y="2" width="32" height="32" rx="8" stroke="url(#logoGrad)" stroke-width="2.5" fill="none"/>
+            <path d="M10 12h6l4 6-4 6h-6l4-6-4-6z" fill="url(#logoGrad)"/>
+            <path d="M18 12h6l-4 6 4 6h-6l-4-6 4-6z" fill="url(#logoGrad)" opacity="0.6"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="36" y2="36">
+                <stop offset="0%" stop-color="#f59e0b"/>
+                <stop offset="100%" stop-color="#ef4444"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text">RG <span class="logo-accent">Metals</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#accessories" class="nav-link">Accessories</a>
+        <a href="#hinges" class="nav-link">Door Hinges</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Premium Door Hardware Since 2005
+      </div>
+      <h1 class="hero-title">
+        Crafting <span class="gradient-text">Excellence</span><br />
+        in Door Hardware
+      </h1>
+      <p class="hero-subtitle">
+        Discover our premium collection of door hinges and accessories,
+        engineered for durability and designed for elegance.
+      </p>
+      <div class="hero-cta">
+        <a href="#products" class="btn btn-primary" id="explore-btn">
+          Explore Products
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#contact" class="btn btn-glass" id="contact-btn">Get a Quote</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number" data-target="500">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Products</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="20">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-target="10000">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-3d-element">
+      <div class="floating-bolt" id="floating-bolt">
+        <!-- Tower Bolt Base Plate -->
+        <div class="bolt-base-plate">
+          <div class="bolt-screw-hole top-left"></div>
+          <div class="bolt-screw-hole top-right"></div>
+          <!-- Bolt Guide / Channel -->
+          <div class="bolt-channel">
+            <div class="bolt-rod">
+              <div class="bolt-rod-tip"></div>
+            </div>
+          </div>
+          <!-- Knob / Handle -->
+          <div class="bolt-knob">
+            <div class="bolt-knob-grip"></div>
+          </div>
+          <div class="bolt-screw-hole bottom-left"></div>
+          <div class="bolt-screw-hole bottom-right"></div>
+        </div>
+        <!-- Keep / Strike Plate -->
+        <div class="bolt-keep">
+          <div class="bolt-keep-hole"></div>
+          <div class="bolt-keep-screw top"></div>
+          <div class="bolt-keep-screw bottom"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Overview Section -->
+  <section id="products" class="section products-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Collection</span>
+        <h2 class="section-title">Explore Our <span class="gradient-text">Product Range</span></h2>
+        <p class="section-desc">From precision-engineered hinges to elegant door accessories, we offer a comprehensive range of hardware solutions.</p>
+      </div>
+      <div class="category-cards">
+        <!-- Door Accessories Category -->
+        <a href="#accessories" class="category-card" id="cat-accessories">
+          <div class="category-card-bg"></div>
+          <div class="category-icon">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="24" r="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
+              <rect x="28" y="34" width="8" height="20" rx="2" stroke="currentColor" stroke-width="2.5" fill="none"/>
+              <line x1="28" y1="44" x2="36" y2="44" stroke="currentColor" stroke-width="2"/>
+              <line x1="28" y1="48" x2="34" y2="48" stroke="currentColor" stroke-width="2"/>
+              <circle cx="32" cy="24" r="3" fill="currentColor" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3 class="category-title">Door Accessories</h3>
+          <p class="category-desc">Complete your doors with our premium handles, locks, stoppers, and more.</p>
+          <span class="category-link">
+            View Collection
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+        <!-- Door Hinges Category -->
+        <a href="#hinges" class="category-card" id="cat-hinges">
+          <div class="category-card-bg"></div>
+          <div class="category-icon">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <rect x="6" y="10" width="20" height="44" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
+              <rect x="38" y="10" width="20" height="44" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
+              <circle cx="32" cy="22" r="4" fill="currentColor" opacity="0.6"/>
+              <circle cx="32" cy="32" r="4" fill="currentColor"/>
+              <circle cx="32" cy="42" r="4" fill="currentColor" opacity="0.6"/>
+            </svg>
+          </div>
+          <h3 class="category-title">Door Hinges</h3>
+          <p class="category-desc">Precision-engineered hinges built for smooth operation and lasting performance.</p>
+          <span class="category-link">
+            View Collection
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Door Accessories Section -->
+  <section id="accessories" class="section accessories-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Door Accessories</span>
+        <h2 class="section-title">Complete Your Doors with <span class="gradient-text">Premium Accessories</span></h2>
+        <p class="section-desc">From handles to stoppers, every detail matters. Explore our curated range of door accessories.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-bar" id="accessory-filters">
+        <button class="filter-btn active" data-filter="all">All Accessories</button>
+        <button class="filter-btn" data-filter="handle">Handles</button>
+        <button class="filter-btn" data-filter="lock">Locks</button>
+        <button class="filter-btn" data-filter="stopper">Door Stoppers</button>
+        <button class="filter-btn" data-filter="closer">Door Closers</button>
+      </div>
+
+      <div class="products-grid" id="accessories-grid">
+        <!-- Accessory Card 1 -->
+        <div class="product-card" data-category="handle" id="product-a1">
+          <div class="product-card-inner">
+            <div class="product-image-wrap">
+              <div class="product-image-placeholder accent-warm">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.3">
+                  <rect x="20" y="25" width="12" height="35" rx="3" stroke="currentColor" stroke-width="2"/>
+                  <path d="M32 30 Q50 30 50 45 Q50 55 32 55" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                <span>Product Image</span>
+              </div>
+              <span class="product-badge">Best Seller</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Lever Door Handle — Modern</h3>
+              <p class="product-sku">SKU: RG-DH-001</p>
+              <div class="product-specs">
+                <div class="spec"><span class="spec-label">Material</span><span class="spec-value">SS 304</span></div>
+                <div class="spec"><span class="spec-label">Size</span><span class="spec-value">130mm Length</span></div>
+                <div class="spec"><span class="spec-label">Finish</span><span class="spec-value">Satin Nickel</span></div>
+                <div class="spec"><span class="spec-label">Type</span><span class="spec-value">Lever on Rose</span></div>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₹850 <span class="price-unit">/ pair</span></span>
+                <button class="btn-icon" aria-label="View details" onclick="openModal('Lever Door Handle — Modern', 'handle')">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accessory Card 2 -->
+        <div class="product-card" data-category="handle" id="product-a2">
+          <div class="product-card-inner">
+            <div class="product-image-wrap">
+              <div class="product-image-placeholder accent-warm">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.3">
+                  <circle cx="40" cy="40" r="14" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="40" cy="40" r="6" fill="currentColor"/>
+                </svg>
+                <span>Product Image</span>
+              </div>
+              <span class="product-badge premium">Premium</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Round Pull Handle — Minimal</h3>
+              <p class="product-sku">SKU: RG-DH-002</p>
+              <div class="product-specs">
+                <div class="spec"><span class="spec-label">Material</span><span class="spec-value">Solid Brass</span></div>
+                <div class="spec"><span class="spec-label">Diameter</span><span class="spec-value">50mm</span></div>
+                <div class="spec"><span class="spec-label">Finish</span><span class="spec-value">PVD Gold</span></div>
+                <div class="spec"><span class="spec-label">Type</span><span class="spec-value">Flush Pull</span></div>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₹1,200 <span class="price-unit">/ piece</span></span>
+                <button class="btn-icon" aria-label="View details" onclick="openModal('Round Pull Handle — Minimal', 'handle')">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accessory Card 3 -->
+        <div class="product-card" data-category="lock" id="product-a3">
+          <div class="product-card-inner">
+            <div class="product-image-wrap">
+              <div class="product-image-placeholder accent-warm">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.3">
+                  <rect x="22" y="35" width="36" height="28" rx="4" stroke="currentColor" stroke-width="2"/>
+                  <path d="M30 35V25a10 10 0 0 1 20 0v10" stroke="currentColor" stroke-width="2" fill="none"/>
+                  <circle cx="40" cy="49" r="4" fill="currentColor"/>
+                  <line x1="40" y1="53" x2="40" y2="57" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Product Image</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Mortise Door Lock — Security</h3>
+              <p class="product-sku">SKU: RG-ML-001</p>
+              <div class="product-specs">
+                <div class="spec"><span class="spec-label">Material</span><span class="spec-value">SS Body</span></div>
+                <div class="spec"><span class="spec-label">Size</span><span class="spec-value">85mm Center</span></div>
+                <div class="spec"><span class="spec-label">Finish</span><span class="spec-value">Satin Steel</span></div>
+                <div class="spec"><span class="spec-label">Type</span><span class="spec-value">3-Lever</span></div>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₹680 <span class="price-unit">/ piece</span></span>
+                <button class="btn-icon" aria-label="View details" onclick="openModal('Mortise Door Lock — Security', 'lock')">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accessory Card 4 -->
+        <div class="product-card" data-category="stopper" id="product-a4">
+          <div class="product-card-inner">
+            <div class="product-image-wrap">
+              <div class="product-image-placeholder accent-warm">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.3">
+                  <path d="M25 55 L40 25 L55 55 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                  <circle cx="40" cy="48" r="4" fill="currentColor"/>
+                </svg>
+                <span>Product Image</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Magnetic Door Stopper</h3>
+              <p class="product-sku">SKU: RG-DS-001</p>
+              <div class="product-specs">
+                <div class="spec"><span class="spec-label">Material</span><span class="spec-value">Zinc Alloy</span></div>
+                <div class="spec"><span class="spec-label">Height</span><span class="spec-value">45mm</span></div>
+                <div class="spec"><span class="spec-label">Finish</span><span class="spec-value">Chrome</span></div>
+                <div class="spec"><span class="spec-label">Mount</span><span class="spec-value">Floor Mount</span></div>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₹220 <span class="price-unit">/ piece</span></span>
+                <button class="btn-icon" aria-label="View details" onclick="openModal('Magnetic Door Stopper', 'stopper')">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accessory Card 5 -->
+        <div class="product-card" data-category="closer" id="product-a5">
+          <div class="product-card-inner">
+            <div class="product-image-wrap">
+              <div class="product-image-placeholder accent-warm">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.3">
+                  <rect x="15" y="30" width="50" height="16" rx="4" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="56" cy="50" r="6" stroke="currentColor" stroke-width="2"/>
+                  <line x1="56" y1="46" x2="56" y2="38" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Product Image</span>
+              </div>
+              <span class="product-badge new">New</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Hydraulic Door Closer</h3>
+              <p class="product-sku">SKU: RG-DC-001</p>
+              <div class="product-specs">
+                <div class="spec"><span class="spec-label">Material</span><span class="spec-value">Aluminium Body</span></div>
+                <div class="spec"><span class="spec-label">Weight Cap</span><span class="spec-value">Up to 65kg</span></div>
+                <div class="spec"><span class="spec-label">Finish</span><span class="spec-value">Silver</span></div>
+                <div class="spec"><span class="spec-label">Speed</span><span class="spec-value">Adjustable</span></div>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₹1,450 <span class="price-unit">/ piece</span></span>
+                <button class="btn-icon" aria-label="View details" onclick="openModal('Hydraulic Door Closer', 'closer')">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accessory Card 6 -->
+        <div class="product-card" data-category="stopper" id="product-a6">
+          <div class="product-card-inner">
+            <div class="product-image-wrap">
+              <div class="product-image-placeholder accent-warm">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.3">
+                  <circle cx="40" cy="45" r="15" stroke="currentColor" stroke-width="2"/>
+                  <line x1="40" y1="30" x2="40" y2="20" stroke="currentColor" stroke-width="3"/>
+                  <circle cx="40" cy="45" r="5" fill="currentColor"/>
+                </svg>
+                <span>Product Image</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Wall-Mount Door Stopper</h3>
+              <p class="product-sku">SKU: RG-DS-002</p>
+              <div class="product-specs">
+                <div class="spec"><span class="spec-label">Material</span><span class="spec-value">SS 304</span></div>
+                <div class="spec"><span class="spec-label">Projection</span><span class="spec-value">75mm</span></div>
+                <div class="spec"><span class="spec-label">Finish</span><span class="spec-value">Brushed SS</span></div>
+                <div class="spec"><span class="spec-label">Mount</span><span class="spec-value">Wall Mount</span></div>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₹175 <span class="price-unit">/ piece</span></span>
+                <button class="btn-icon" aria-label="View details" onclick="openModal('Wall-Mount Door Stopper', 'stopper')">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Door Hinges Section -->
+  <section id="hinges" class="section hinges-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Door Hinges</span>
+        <h2 class="section-title">Premium <span class="gradient-text">Door Hinges</span></h2>
+        <p class="section-desc">Engineered for durability, designed for seamless functionality. Choose from our wide range of hinge styles.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-bar" id="hinge-filters">
+        <button class="filter-btn active" data-filter="all">All Hinges</button>
+        <button class="filter-btn" data-filter="butt">Butt Hinges</button>
+        <button class="filter-btn" data-filter="barrel">Barrel Hinges</button>
+        <button class="filter-btn" data-filter="parliament">Parliament Hinges</button>
+        <button class="filter-btn" data-filter="concealed">Concealed Hinges</button>
+      </div>
+
+      <div class="products-grid" id="hinges-grid">
+        <!-- Product Card 1 -->
+        <div class="product-card" data-category="butt" id="product-h1">
+          <div class="product-card-inner">
+            <div class="product-image-wrap">
+              <div class="product-image-placeholder">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.3">
+                  <rect x="10" y="15" width="24" height="50" rx="3" stroke="currentColor" stroke-width="2"/>
+                  <rect x="46" y="15" width="24" height="50" rx="3" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="40" cy="30" r="4" fill="currentColor"/>
+                  <circle cx="40" cy="42" r="4" fill="currentColor"/>
+                  <circle cx="40" cy="54" r="4" fill="currentColor"/>
+                </svg>
+                <span>Product Image</span>
+              </div>
+              <span class="product-badge">Best Seller</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Stainless Steel Butt Hinge</h3>
+              <p class="product-sku">SKU: RG-BH-001</p>
+              <div class="product-specs">
+                <div class="spec"><span class="spec-label">Material</span><span class="spec-value">SS 304</span></div>
+                <div class="spec"><span class="spec-label">Size</span><span class="spec-value">4" × 3" × 2.5mm</span></div>
+                <div class="spec"><span class="spec-label">Finish</span><span class="spec-value">Satin</span></div>
+                <div class="spec"><span class="spec-label">Weight</span><span class="spec-value">120g</span></div>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₹185 <span class="price-unit">/ piece</span></span>
+                <button class="btn-icon" aria-label="View details" onclick="openModal('Stainless Steel Butt Hinge', 'butt')">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="product-card" data-category="butt" id="product-h2">
+          <div class="product-card-inner">
+            <div class="product-image-wrap">
+              <div class="product-image-placeholder">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.3">
+                  <rect x="10" y="15" width="24" height="50" rx="3" stroke="currentColor" stroke-width="2"/>
+                  <rect x="46" y="15" width="24" height="50" rx="3" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="40" cy="30" r="4" fill="currentColor"/>
+                  <circle cx="40" cy="42" r="4" fill="currentColor"/>
+                  <circle cx="40" cy="54" r="4" fill="currentColor"/>
+                </svg>
+                <span>Product Image</span>
+              </div>
+              <span class="product-badge new">New</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Brass Butt Hinge — Antique</h3>
+              <p class="product-sku">SKU: RG-BH-002</p>
+              <div class="product-specs">
+                <div class="spec"><span class="spec-label">Material</span><span class="spec-value">Solid Brass</span></div>
+                <div class="spec"><span class="spec-label">Size</span><span class="spec-value">4" × 3" × 3mm</span></div>
+                <div class="spec"><span class="spec-label">Finish</span><span class="spec-value">Antique Bronze</span></div>
+                <div class="spec"><span class="spec-label">Weight</span><span class="spec-value">160g</span></div>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₹320 <span class="price-unit">/ piece</span></span>
+                <button class="btn-icon" aria-label="View details" onclick="openModal('Brass Butt Hinge — Antique', 'butt')">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="product-card" data-category="barrel" id="product-h3">
+          <div class="product-card-inner">
+            <div class="product-image-wrap">
+              <div class="product-image-placeholder">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.3">
+                  <rect x="20" y="20" width="40" height="12" rx="6" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="40" cy="50" r="10" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="40" cy="50" r="4" fill="currentColor"/>
+                </svg>
+                <span>Product Image</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Heavy Duty Barrel Hinge</h3>
+              <p class="product-sku">SKU: RG-BR-001</p>
+              <div class="product-specs">
+                <div class="spec"><span class="spec-label">Material</span><span class="spec-value">SS 316</span></div>
+                <div class="spec"><span class="spec-label">Size</span><span class="spec-value">3" × 1.5"</span></div>
+                <div class="spec"><span class="spec-label">Finish</span><span class="spec-value">Mirror Polish</span></div>
+                <div class="spec"><span class="spec-label">Load</span><span class="spec-value">Up to 80kg</span></div>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₹450 <span class="price-unit">/ piece</span></span>
+                <button class="btn-icon" aria-label="View details" onclick="openModal('Heavy Duty Barrel Hinge', 'barrel')">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="product-card" data-category="barrel" id="product-h4">
+          <div class="product-card-inner">
+            <div class="product-image-wrap">
+              <div class="product-image-placeholder">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.3">
+                  <rect x="20" y="20" width="40" height="12" rx="6" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="40" cy="50" r="10" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="40" cy="50" r="4" fill="currentColor"/>
+                </svg>
+                <span>Product Image</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Compact Barrel Hinge</h3>
+              <p class="product-sku">SKU: RG-BR-002</p>
+              <div class="product-specs">
+                <div class="spec"><span class="spec-label">Material</span><span class="spec-value">SS 304</span></div>
+                <div class="spec"><span class="spec-label">Size</span><span class="spec-value">2" × 1"</span></div>
+                <div class="spec"><span class="spec-label">Finish</span><span class="spec-value">Brushed</span></div>
+                <div class="spec"><span class="spec-label">Load</span><span class="spec-value">Up to 40kg</span></div>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₹280 <span class="price-unit">/ piece</span></span>
+                <button class="btn-icon" aria-label="View details" onclick="openModal('Compact Barrel Hinge', 'barrel')">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="product-card" data-category="parliament" id="product-h5">
+          <div class="product-card-inner">
+            <div class="product-image-wrap">
+              <div class="product-image-placeholder">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.3">
+                  <path d="M10 20h25v40H10z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M45 20h25v40H45z" stroke="currentColor" stroke-width="2"/>
+                  <rect x="33" y="25" width="14" height="30" rx="2" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Product Image</span>
+              </div>
+              <span class="product-badge premium">Premium</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Parliament Hinge — Wide Throw</h3>
+              <p class="product-sku">SKU: RG-PH-001</p>
+              <div class="product-specs">
+                <div class="spec"><span class="spec-label">Material</span><span class="spec-value">SS 304</span></div>
+                <div class="spec"><span class="spec-label">Size</span><span class="spec-value">5" × 4" × 3mm</span></div>
+                <div class="spec"><span class="spec-label">Finish</span><span class="spec-value">Satin Chrome</span></div>
+                <div class="spec"><span class="spec-label">Opening</span><span class="spec-value">180°</span></div>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₹520 <span class="price-unit">/ piece</span></span>
+                <button class="btn-icon" aria-label="View details" onclick="openModal('Parliament Hinge — Wide Throw', 'parliament')">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div class="product-card" data-category="concealed" id="product-h6">
+          <div class="product-card-inner">
+            <div class="product-image-wrap">
+              <div class="product-image-placeholder">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" opacity="0.3">
+                  <rect x="15" y="20" width="50" height="14" rx="3" stroke="currentColor" stroke-width="2"/>
+                  <rect x="25" y="46" width="30" height="14" rx="3" stroke="currentColor" stroke-width="2"/>
+                  <line x1="35" y1="34" x2="35" y2="46" stroke="currentColor" stroke-width="2"/>
+                  <line x1="45" y1="34" x2="45" y2="46" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Product Image</span>
+              </div>
+              <span class="product-badge new">New</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Soft-Close Concealed Hinge</h3>
+              <p class="product-sku">SKU: RG-CH-001</p>
+              <div class="product-specs">
+                <div class="spec"><span class="spec-label">Material</span><span class="spec-value">Steel + Nickel</span></div>
+                <div class="spec"><span class="spec-label">Size</span><span class="spec-value">35mm Cup</span></div>
+                <div class="spec"><span class="spec-label">Finish</span><span class="spec-value">Nickel Plated</span></div>
+                <div class="spec"><span class="spec-label">Opening</span><span class="spec-value">110°</span></div>
+              </div>
+              <div class="product-footer">
+                <span class="product-price">₹95 <span class="price-unit">/ piece</span></span>
+                <button class="btn-icon" aria-label="View details" onclick="openModal('Soft-Close Concealed Hinge', 'concealed')">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section why-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why RG Metals</span>
+        <h2 class="section-title">Built on <span class="gradient-text">Trust & Quality</span></h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card" id="why-quality">
+          <div class="why-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <path d="M20 4l4.5 9.5L35 15l-7.5 7 2 10.5L20 27.5 10.5 32.5l2-10.5L5 15l10.5-1.5L20 4z" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          <h3>Premium Quality</h3>
+          <p>Every product undergoes rigorous quality testing to ensure long-lasting performance and reliability.</p>
+        </div>
+        <div class="why-card" id="why-range">
+          <div class="why-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <rect x="5" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+              <rect x="23" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+              <rect x="5" y="24" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+              <rect x="23" y="24" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Wide Range</h3>
+          <p>Over 500 products covering every door hardware need — from hinges and handles to closers and locks.</p>
+        </div>
+        <div class="why-card" id="why-support">
+          <div class="why-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="16" r="8" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 34c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          <h3>Expert Support</h3>
+          <p>Our team of hardware specialists is always ready to help you find the perfect solution for your project.</p>
+        </div>
+        <div class="why-card" id="why-delivery">
+          <div class="why-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <rect x="4" y="12" width="24" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M28 16h6l4 6v6h-10" stroke="currentColor" stroke-width="2" fill="none"/>
+              <circle cx="12" cy="30" r="3" stroke="currentColor" stroke-width="2"/>
+              <circle cx="32" cy="30" r="3" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Fast Delivery</h3>
+          <p>Pan-India delivery with express shipping options. Most orders dispatched within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-card">
+        <div class="contact-left">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Ready to Upgrade<br/>Your <span class="gradient-text">Door Hardware?</span></h2>
+          <p>Contact us for bulk orders, custom requirements, or any inquiries. Our team is ready to help.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M3 5h14a2 2 0 012 2v8a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2z" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M1 5l9 6 9-6" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+              <span>info@rgmetals.com</span>
+            </div>
+            <div class="contact-item">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M2 3h4l2 5-2.5 1.5a11 11 0 005 5L12 12l5 2v4a2 2 0 01-2 2A16 16 0 012 3z" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+              <span>+91 98765 43210</span>
+            </div>
+            <div class="contact-item">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 1C6.13 1 3 4.13 3 8c0 5.25 7 11 7 11s7-5.75 7-11c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="10" cy="8" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+              <span>Industrial Area, Phase-2, New Delhi, India</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your requirements..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+              Send Enquiry
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <span class="logo-icon">
+              <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+                <rect x="2" y="2" width="32" height="32" rx="8" stroke="url(#logoGrad2)" stroke-width="2.5" fill="none"/>
+                <path d="M10 12h6l4 6-4 6h-6l4-6-4-6z" fill="url(#logoGrad2)"/>
+                <path d="M18 12h6l-4 6 4 6h-6l-4-6 4-6z" fill="url(#logoGrad2)" opacity="0.6"/>
+                <defs>
+                  <linearGradient id="logoGrad2" x1="0" y1="0" x2="36" y2="36">
+                    <stop offset="0%" stop-color="#f59e0b"/>
+                    <stop offset="100%" stop-color="#ef4444"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <span class="logo-text">RG <span class="logo-accent">Metals</span></span>
+          </div>
+          <p class="footer-desc">Premium door hardware and accessories. Trusted by professionals and homeowners across India since 2005.</p>
+        </div>
+        <div class="footer-links-group">
+          <h4>Products</h4>
+          <a href="#hinges">Door Hinges</a>
+          <a href="#accessories">Door Accessories</a>
+          <a href="#accessories">Door Handles</a>
+          <a href="#accessories">Door Closers</a>
+        </div>
+        <div class="footer-links-group">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Blog</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-links-group">
+          <h4>Support</h4>
+          <a href="#">FAQ</a>
+          <a href="#">Shipping Policy</a>
+          <a href="#">Returns</a>
+          <a href="#">Warranty</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 RG Metals. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Product Detail Modal -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close-btn" onclick="closeModal()" aria-label="Close modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="modal-body">
+        <div class="modal-image">
+          <div class="product-image-placeholder large">
+            <svg width="120" height="120" viewBox="0 0 80 80" fill="none" opacity="0.3">
+              <rect x="10" y="15" width="24" height="50" rx="3" stroke="currentColor" stroke-width="2"/>
+              <rect x="46" y="15" width="24" height="50" rx="3" stroke="currentColor" stroke-width="2"/>
+              <circle cx="40" cy="30" r="4" fill="currentColor"/>
+              <circle cx="40" cy="42" r="4" fill="currentColor"/>
+              <circle cx="40" cy="54" r="4" fill="currentColor"/>
+            </svg>
+            <span>Product Image</span>
+          </div>
+        </div>
+        <div class="modal-details">
+          <h2 id="modal-title">Product Name</h2>
+          <p class="modal-category" id="modal-category">Category</p>
+          <div class="modal-spec-grid" id="modal-specs">
+            <!-- Dynamically populated -->
+          </div>
+          <div class="modal-description">
+            <h4>Product Description</h4>
+            <p id="modal-desc">Detailed product description will appear here.</p>
+          </div>
+          <div class="modal-actions">
+            <a href="#contact" class="btn btn-primary" onclick="closeModal()">Request Quote</a>
+            <button class="btn btn-glass">Download Spec Sheet</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
