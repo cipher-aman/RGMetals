@@ -280,7 +280,7 @@ function initFilter(filterBarId, gridId) {
   });
 }
 
-initFilter('hinge-filters', 'hinges-grid');
+// Only accessories have filters now (hinges have no filters)
 initFilter('accessory-filters', 'accessories-grid');
 
 
@@ -336,176 +336,63 @@ initFilter('accessory-filters', 'accessories-grid');
 
 
 // ===== Product Modal =====
-const productData = {
-  'Stainless Steel Butt Hinge': {
-    category: 'Butt Hinge',
-    specs: [
-      { label: 'Material', value: 'Stainless Steel 304' },
-      { label: 'Size', value: '4" × 3" × 2.5mm' },
-      { label: 'Finish', value: 'Satin' },
-      { label: 'Weight', value: '120g' },
-      { label: 'Load Capacity', value: 'Up to 40kg per hinge' },
-      { label: 'Screws Included', value: 'Yes (8 pcs)' },
-    ],
-    description: 'Our most popular butt hinge, crafted from premium SS 304 stainless steel. The satin finish resists fingerprints and blends seamlessly with modern door frames. Features precision ball bearings for ultra-smooth operation and is corrosion-resistant for both interior and exterior use.',
-    price: '₹185 / piece',
-  },
-  'Brass Butt Hinge — Antique': {
-    category: 'Butt Hinge',
-    specs: [
-      { label: 'Material', value: 'Solid Brass' },
-      { label: 'Size', value: '4" × 3" × 3mm' },
-      { label: 'Finish', value: 'Antique Bronze' },
-      { label: 'Weight', value: '160g' },
-      { label: 'Load Capacity', value: 'Up to 35kg per hinge' },
-      { label: 'Screws Included', value: 'Yes (8 pcs)' },
-    ],
-    description: 'A beautifully crafted solid brass hinge with an antique bronze finish. Perfect for heritage restoration, vintage-style interiors, and premium wooden doors. Each hinge is individually finished to create a unique, time-honored appearance.',
-    price: '₹320 / piece',
-  },
-  'Heavy Duty Barrel Hinge': {
-    category: 'Barrel Hinge',
-    specs: [
-      { label: 'Material', value: 'Stainless Steel 316' },
-      { label: 'Size', value: '3" × 1.5"' },
-      { label: 'Finish', value: 'Mirror Polish' },
-      { label: 'Load Capacity', value: 'Up to 80kg' },
-      { label: 'Rotation', value: '360°' },
-      { label: 'Application', value: 'Gates & Heavy Doors' },
-    ],
-    description: 'Heavy-duty barrel hinge designed for gates, industrial doors, and high-traffic applications. Made from marine-grade SS 316 stainless steel for exceptional corrosion resistance. The mirror polish finish adds a professional aesthetic to any installation.',
-    price: '₹450 / piece',
-  },
-  'Compact Barrel Hinge': {
-    category: 'Barrel Hinge',
-    specs: [
-      { label: 'Material', value: 'Stainless Steel 304' },
-      { label: 'Size', value: '2" × 1"' },
-      { label: 'Finish', value: 'Brushed' },
-      { label: 'Load Capacity', value: 'Up to 40kg' },
-      { label: 'Rotation', value: '270°' },
-      { label: 'Application', value: 'Cabinets & Lightweight Doors' },
-    ],
-    description: 'Compact and versatile barrel hinge ideal for cabinet doors, small gates, and lightweight applications. The brushed stainless steel finish provides a contemporary look while maintaining excellent durability and smooth rotation.',
-    price: '₹280 / piece',
-  },
-  'Parliament Hinge — Wide Throw': {
-    category: 'Parliament Hinge',
-    specs: [
-      { label: 'Material', value: 'Stainless Steel 304' },
-      { label: 'Size', value: '5" × 4" × 3mm' },
-      { label: 'Finish', value: 'Satin Chrome' },
-      { label: 'Opening Angle', value: '180°' },
-      { label: 'Load Capacity', value: 'Up to 50kg per hinge' },
-      { label: 'Application', value: 'Wide-opening doors' },
-    ],
-    description: 'Parliament hinges with extended leaves that allow doors to open a full 180° — clearing architraves and thick frames. Essential for accessibility compliance and wide-opening requirements. Satin chrome finish for a sleek, modern appearance.',
-    price: '₹520 / piece',
-  },
-  'Soft-Close Concealed Hinge': {
-    category: 'Concealed Hinge',
-    specs: [
-      { label: 'Material', value: 'Steel + Nickel Plating' },
-      { label: 'Cup Size', value: '35mm' },
-      { label: 'Finish', value: 'Nickel Plated' },
-      { label: 'Opening Angle', value: '110°' },
-      { label: 'Soft-Close', value: 'Integrated damper' },
-      { label: 'Overlay', value: 'Full overlay' },
-    ],
-    description: 'Premium concealed hinge with integrated soft-close mechanism. Perfect for kitchen cabinets, wardrobes, and furniture. The clip-on design allows for tool-free mounting and 3-dimensional adjustment for perfect door alignment every time.',
-    price: '₹95 / piece',
-  },
-  'Lever Door Handle — Modern': {
-    category: 'Door Handle',
-    specs: [
-      { label: 'Material', value: 'Stainless Steel 304' },
-      { label: 'Length', value: '130mm' },
-      { label: 'Finish', value: 'Satin Nickel' },
-      { label: 'Type', value: 'Lever on Rose' },
-      { label: 'Rose Diameter', value: '52mm' },
-      { label: 'Spindle', value: '8mm square included' },
-    ],
-    description: 'Sleek, modern lever handle with a minimalist design. The ergonomic lever provides comfortable grip and smooth return action. Rose-mounted design for clean aesthetics. Suitable for interior doors in residential and commercial projects.',
-    price: '₹850 / pair',
-  },
-  'Round Pull Handle — Minimal': {
-    category: 'Door Handle',
-    specs: [
-      { label: 'Material', value: 'Solid Brass' },
-      { label: 'Diameter', value: '50mm' },
-      { label: 'Finish', value: 'PVD Gold' },
-      { label: 'Type', value: 'Flush Pull' },
-      { label: 'Depth', value: '8mm recess' },
-      { label: 'Application', value: 'Sliding Doors' },
-    ],
-    description: 'Ultra-minimal flush pull handle designed for sliding doors and pocket doors. Crafted from solid brass with a luxurious PVD gold finish that is scratch-resistant and maintains its lustre for years. The recessed design sits flush with the door surface.',
-    price: '₹1,200 / piece',
-  },
-  'Mortise Door Lock — Security': {
-    category: 'Door Lock',
-    specs: [
-      { label: 'Material', value: 'Stainless Steel Body' },
-      { label: 'Center Distance', value: '85mm' },
-      { label: 'Finish', value: 'Satin Steel' },
-      { label: 'Type', value: '3-Lever Mortise' },
-      { label: 'Backset', value: '60mm' },
-      { label: 'Keys', value: '3 keys included' },
-    ],
-    description: 'High-security 3-lever mortise lock designed for residential front doors. The stainless steel body ensures long-lasting durability, while the precision-machined levers provide reliable locking action. Comes with 3 keys and a strike plate.',
-    price: '₹680 / piece',
-  },
-  'Magnetic Door Stopper': {
-    category: 'Door Stopper',
-    specs: [
-      { label: 'Material', value: 'Zinc Alloy' },
-      { label: 'Height', value: '45mm' },
-      { label: 'Finish', value: 'Chrome' },
-      { label: 'Mount Type', value: 'Floor Mount' },
-      { label: 'Magnet', value: 'Neodymium' },
-      { label: 'Hold Force', value: '3kg' },
-    ],
-    description: 'Elegant magnetic door stopper that holds doors open securely. The powerful neodymium magnet provides firm hold while the zinc alloy body ensures durability. Floor-mounted design with minimal visual footprint. Includes a matching door-mounted catch plate.',
-    price: '₹220 / piece',
-  },
-  'Hydraulic Door Closer': {
-    category: 'Door Closer',
-    specs: [
-      { label: 'Material', value: 'Aluminium Body' },
-      { label: 'Weight Capacity', value: 'Up to 65kg' },
-      { label: 'Finish', value: 'Silver' },
-      { label: 'Closing Speed', value: 'Adjustable' },
-      { label: 'Latching Speed', value: 'Adjustable' },
-      { label: 'Backcheck', value: 'Yes' },
-    ],
-    description: 'Professional-grade hydraulic door closer with adjustable closing and latching speeds. The backcheck feature prevents doors from slamming open. Suitable for interior and light exterior doors up to 65kg. Easy to install with included template and fixings.',
-    price: '₹1,450 / piece',
-  },
-  'Wall-Mount Door Stopper': {
-    category: 'Door Stopper',
-    specs: [
-      { label: 'Material', value: 'Stainless Steel 304' },
-      { label: 'Projection', value: '75mm' },
-      { label: 'Finish', value: 'Brushed SS' },
-      { label: 'Mount Type', value: 'Wall Mount' },
-      { label: 'Bumper', value: 'Silicone Tip' },
-      { label: 'Fixings', value: 'Included' },
-    ],
-    description: 'Wall-mounted door stopper with a soft silicone tip to prevent wall and door damage. The brushed stainless steel body complements modern interiors. Simple installation with included wall plugs and screws. Designed to handle heavy doors with ease.',
-    price: '₹175 / piece',
-  },
-};
+// Generic specs used for all products (will be populated with real data later)
+const defaultSpecs = [
+  { label: 'Material', value: '-------' },
+  { label: 'Size', value: '-------' },
+  { label: 'Finish', value: '-------' },
+  { label: 'Weight', value: '-------' },
+];
+
+// Map product names to their image paths and categories
+function getProductInfo(productName) {
+  const name = productName.toLowerCase();
+  let category = 'Accessory';
+  let imagePath = '';
+
+  if (name.startsWith('tower bolt')) {
+    category = 'Tower Bolt';
+    const num = name.replace('tower bolt ', '');
+    imagePath = `images/towerbolt_${num}.jpg`;
+  } else if (name.startsWith('handle')) {
+    category = 'Handle';
+    if (name.includes('(3 handles)')) {
+      imagePath = 'images/handle_4 (3 handles).jpg';
+    } else {
+      const num = name.replace('handle ', '');
+      imagePath = `images/handle_${num}.jpg`;
+    }
+  } else if (name.startsWith('stopper')) {
+    category = 'Stopper';
+    const num = name.replace('stopper ', '');
+    imagePath = `images/stopper_${num}.jpg`;
+  } else if (name.startsWith('hinge')) {
+    category = 'Hinge';
+    const num = name.replace('hinge ', '');
+    imagePath = `images/hinge_${num}.jpg`;
+  }
+
+  return { category, imagePath };
+}
 
 function openModal(productName) {
   const modal = document.getElementById('product-modal');
-  const data = productData[productName];
-  if (!modal || !data) return;
+  if (!modal) return;
+
+  const info = getProductInfo(productName);
 
   document.getElementById('modal-title').textContent = productName;
-  document.getElementById('modal-category').textContent = data.category;
-  document.getElementById('modal-desc').textContent = data.description;
+  document.getElementById('modal-category').textContent = info.category;
+  document.getElementById('modal-desc').textContent = 'Product specifications will be updated soon. Contact us for detailed information about this product.';
+
+  // Update modal image
+  const imageContainer = document.getElementById('modal-image-container');
+  if (imageContainer && info.imagePath) {
+    imageContainer.innerHTML = `<img src="${info.imagePath}" alt="${productName}" class="product-image" style="height: 100%; min-height: 300px; border-radius: var(--radius-md);">`;
+  }
 
   const specsGrid = document.getElementById('modal-specs');
-  specsGrid.innerHTML = data.specs.map(spec => `
+  specsGrid.innerHTML = defaultSpecs.map(spec => `
     <div class="spec">
       <span class="spec-label">${spec.label}</span>
       <span class="spec-value">${spec.value}</span>
