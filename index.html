@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RG Metals — Premium Door Hardware & Accessories</title>
-  <meta name="description" content="RG Metals offers premium door hinges, handles, and accessories. Explore our collection of high-quality door hardware crafted for durability and elegance." />
+  <meta name="description"
+    content="RG Metals offers premium door hinges, handles, and accessories. Explore our collection of high-quality door hardware crafted for durability and elegance." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <!-- Floating 3D particles canvas -->
   <canvas id="particles-canvas"></canvas>
@@ -57,7 +62,8 @@
         <a href="#products" class="btn btn-primary" id="explore-btn">
           Explore Products
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
           </svg>
         </a>
         <a href="#contact" class="btn btn-glass" id="contact-btn">Get a Quote</a>
@@ -80,26 +86,18 @@
       </div>
     </div>
     <div class="hero-3d-element">
-      <div class="floating-bolt" id="floating-bolt">
-        <!-- Tower Bolt Base Plate (two-tone design based on towerbolt_5.jpg) -->
-        <div class="bolt-base-plate">
-          <div class="bolt-screw-hole top-left"></div>
-          <div class="bolt-screw-hole top-right"></div>
-          <!-- Square top cap -->
-          <div class="bolt-top-cap"></div>
-          <!-- Bolt Channel -->
-          <div class="bolt-channel">
-            <div class="bolt-rod"></div>
-          </div>
-          <!-- Cylindrical Knob (protrudes right) -->
-          <div class="bolt-knob-assembly">
-            <div class="bolt-knob-shaft"></div>
-            <div class="bolt-knob-head"></div>
-          </div>
-          <div class="bolt-screw-hole bottom-left"></div>
-          <div class="bolt-screw-hole bottom-right"></div>
+
+      <!-- ========================================== -->
+      <!-- APPROACH 1: Using the Actual Image         -->
+      <!-- UNCOMMENT this block to use the actual     -->
+      <!-- images/towerbolt_5.jpg photo instead       -->
+      <!-- ========================================== -->
+      <div class="floating-bolt-image-wrapper" id="floating-bolt-img-container">
+        <div class="image-glass-card">
+          <img src="images/towerbolt_5.jpg" alt="Tower Bolt" class="floating-bolt-image">
         </div>
       </div>
+
     </div>
   </section>
 
@@ -109,7 +107,8 @@
       <div class="section-header">
         <span class="section-tag">Our Collection</span>
         <h2 class="section-title">Explore Our <span class="gradient-text">Product Range</span></h2>
-        <p class="section-desc">From precision-engineered hinges to elegant door accessories, we offer a comprehensive range of hardware solutions.</p>
+        <p class="section-desc">From precision-engineered hinges to elegant door accessories, we offer a comprehensive
+          range of hardware solutions.</p>
       </div>
       <div class="category-cards">
         <!-- Door Accessories Category -->
@@ -117,11 +116,11 @@
           <div class="category-card-bg"></div>
           <div class="category-icon">
             <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-              <circle cx="32" cy="24" r="10" stroke="currentColor" stroke-width="2.5" fill="none"/>
-              <rect x="28" y="34" width="8" height="20" rx="2" stroke="currentColor" stroke-width="2.5" fill="none"/>
-              <line x1="28" y1="44" x2="36" y2="44" stroke="currentColor" stroke-width="2"/>
-              <line x1="28" y1="48" x2="34" y2="48" stroke="currentColor" stroke-width="2"/>
-              <circle cx="32" cy="24" r="3" fill="currentColor" opacity="0.5"/>
+              <circle cx="32" cy="24" r="10" stroke="currentColor" stroke-width="2.5" fill="none" />
+              <rect x="28" y="34" width="8" height="20" rx="2" stroke="currentColor" stroke-width="2.5" fill="none" />
+              <line x1="28" y1="44" x2="36" y2="44" stroke="currentColor" stroke-width="2" />
+              <line x1="28" y1="48" x2="34" y2="48" stroke="currentColor" stroke-width="2" />
+              <circle cx="32" cy="24" r="3" fill="currentColor" opacity="0.5" />
             </svg>
           </div>
           <h3 class="category-title">Door Accessories</h3>
@@ -129,7 +128,8 @@
           <span class="category-link">
             View Collection
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
           </span>
         </a>
@@ -138,11 +138,11 @@
           <div class="category-card-bg"></div>
           <div class="category-icon">
             <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-              <rect x="6" y="10" width="20" height="44" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
-              <rect x="38" y="10" width="20" height="44" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
-              <circle cx="32" cy="22" r="4" fill="currentColor" opacity="0.6"/>
-              <circle cx="32" cy="32" r="4" fill="currentColor"/>
-              <circle cx="32" cy="42" r="4" fill="currentColor" opacity="0.6"/>
+              <rect x="6" y="10" width="20" height="44" rx="3" stroke="currentColor" stroke-width="2.5" fill="none" />
+              <rect x="38" y="10" width="20" height="44" rx="3" stroke="currentColor" stroke-width="2.5" fill="none" />
+              <circle cx="32" cy="22" r="4" fill="currentColor" opacity="0.6" />
+              <circle cx="32" cy="32" r="4" fill="currentColor" />
+              <circle cx="32" cy="42" r="4" fill="currentColor" opacity="0.6" />
             </svg>
           </div>
           <h3 class="category-title">Door Hinges</h3>
@@ -150,7 +150,8 @@
           <span class="category-link">
             View Collection
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
           </span>
         </a>
@@ -164,7 +165,8 @@
       <div class="section-header">
         <span class="section-tag">Door Accessories</span>
         <h2 class="section-title">Complete Your Doors with <span class="gradient-text">Premium Accessories</span></h2>
-        <p class="section-desc">From handles to stoppers, every detail matters. Explore our curated range of door accessories.</p>
+        <p class="section-desc">From handles to stoppers, every detail matters. Explore our curated range of door
+          accessories.</p>
       </div>
 
       <!-- Filter Tabs -->
@@ -195,7 +197,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 1')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -218,7 +223,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 2')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -241,7 +249,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 3')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -264,7 +275,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 4')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -287,7 +301,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 5')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -310,7 +327,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 6')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -333,7 +353,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 7')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -356,7 +379,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 8')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -379,7 +405,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 9')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -402,7 +431,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 10')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -425,7 +457,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 11')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -448,7 +483,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 12')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -471,7 +509,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 13')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -494,7 +535,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 14')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -517,7 +561,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 15')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -540,7 +587,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 16')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -563,7 +613,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 17')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -586,7 +639,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 18')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -609,7 +665,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Tower Bolt 19')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -634,7 +693,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Handle 1')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -657,7 +719,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Handle 2')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -680,7 +745,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Handle 3')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -703,7 +771,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Handle 4 (3 Handles)')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -728,7 +799,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Stopper 1')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -751,7 +825,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Stopper 2')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -774,7 +851,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Stopper 3')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -797,7 +877,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Stopper 4')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -814,7 +897,8 @@
       <div class="section-header">
         <span class="section-tag">Door Hinges</span>
         <h2 class="section-title">Premium <span class="gradient-text">Door Hinges</span></h2>
-        <p class="section-desc">Engineered for durability, designed for seamless functionality. Choose from our wide range of hinge styles.</p>
+        <p class="section-desc">Engineered for durability, designed for seamless functionality. Choose from our wide
+          range of hinge styles.</p>
       </div>
 
       <div class="products-grid" id="hinges-grid">
@@ -835,7 +919,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Hinge 1')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -858,7 +945,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Hinge 2')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -881,7 +971,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Hinge 3')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -904,7 +997,10 @@
               </div>
               <div class="product-footer">
                 <button class="btn-icon" aria-label="View details" onclick="openModal('Hinge 4')">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -926,7 +1022,8 @@
         <div class="why-card" id="why-quality">
           <div class="why-icon">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M20 4l4.5 9.5L35 15l-7.5 7 2 10.5L20 27.5 10.5 32.5l2-10.5L5 15l10.5-1.5L20 4z" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M20 4l4.5 9.5L35 15l-7.5 7 2 10.5L20 27.5 10.5 32.5l2-10.5L5 15l10.5-1.5L20 4z"
+                stroke="currentColor" stroke-width="2" fill="none" />
             </svg>
           </div>
           <h3>Premium Quality</h3>
@@ -935,32 +1032,35 @@
         <div class="why-card" id="why-range">
           <div class="why-icon">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <rect x="5" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
-              <rect x="23" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
-              <rect x="5" y="24" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
-              <rect x="23" y="24" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
+              <rect x="5" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2" />
+              <rect x="23" y="8" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2" />
+              <rect x="5" y="24" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2" />
+              <rect x="23" y="24" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2" />
             </svg>
           </div>
           <h3>Wide Range</h3>
-          <p>Over 500 products covering every door hardware need — from hinges and handles to tower bolts and stoppers.</p>
+          <p>Over 500 products covering every door hardware need — from hinges and handles to tower bolts and stoppers.
+          </p>
         </div>
         <div class="why-card" id="why-support">
           <div class="why-icon">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <circle cx="20" cy="16" r="8" stroke="currentColor" stroke-width="2"/>
-              <path d="M8 34c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="2" fill="none"/>
+              <circle cx="20" cy="16" r="8" stroke="currentColor" stroke-width="2" />
+              <path d="M8 34c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="2"
+                fill="none" />
             </svg>
           </div>
           <h3>Expert Support</h3>
-          <p>Our team of hardware specialists is always ready to help you find the perfect solution for your project.</p>
+          <p>Our team of hardware specialists is always ready to help you find the perfect solution for your project.
+          </p>
         </div>
         <div class="why-card" id="why-delivery">
           <div class="why-icon">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <rect x="4" y="12" width="24" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
-              <path d="M28 16h6l4 6v6h-10" stroke="currentColor" stroke-width="2" fill="none"/>
-              <circle cx="12" cy="30" r="3" stroke="currentColor" stroke-width="2"/>
-              <circle cx="32" cy="30" r="3" stroke="currentColor" stroke-width="2"/>
+              <rect x="4" y="12" width="24" height="16" rx="2" stroke="currentColor" stroke-width="2" />
+              <path d="M28 16h6l4 6v6h-10" stroke="currentColor" stroke-width="2" fill="none" />
+              <circle cx="12" cy="30" r="3" stroke="currentColor" stroke-width="2" />
+              <circle cx="32" cy="30" r="3" stroke="currentColor" stroke-width="2" />
             </svg>
           </div>
           <h3>Fast Delivery</h3>
@@ -976,26 +1076,29 @@
       <div class="contact-card">
         <div class="contact-left">
           <span class="section-tag">Get In Touch</span>
-          <h2 class="section-title">Ready to Upgrade<br/>Your <span class="gradient-text">Door Hardware?</span></h2>
+          <h2 class="section-title">Ready to Upgrade<br />Your <span class="gradient-text">Door Hardware?</span></h2>
           <p>Contact us for bulk orders, custom requirements, or any inquiries. Our team is ready to help.</p>
           <div class="contact-details">
             <div class="contact-item">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M3 5h14a2 2 0 012 2v8a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2z" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M1 5l9 6 9-6" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M3 5h14a2 2 0 012 2v8a2 2 0 01-2 2H3a2 2 0 01-2-2V7a2 2 0 012-2z" stroke="currentColor"
+                  stroke-width="1.5" />
+                <path d="M1 5l9 6 9-6" stroke="currentColor" stroke-width="1.5" />
               </svg>
               <span>info@rgmetals.com</span>
             </div>
             <div class="contact-item">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M2 3h4l2 5-2.5 1.5a11 11 0 005 5L12 12l5 2v4a2 2 0 01-2 2A16 16 0 012 3z" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M2 3h4l2 5-2.5 1.5a11 11 0 005 5L12 12l5 2v4a2 2 0 01-2 2A16 16 0 012 3z" stroke="currentColor"
+                  stroke-width="1.5" />
               </svg>
-              <span>+91 98765 43210</span>
+              <span>+91 98730 36036</span>
             </div>
             <div class="contact-item">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M10 1C6.13 1 3 4.13 3 8c0 5.25 7 11 7 11s7-5.75 7-11c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.5"/>
-                <circle cx="10" cy="8" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M10 1C6.13 1 3 4.13 3 8c0 5.25 7 11 7 11s7-5.75 7-11c0-3.87-3.13-7-7-7z" stroke="currentColor"
+                  stroke-width="1.5" />
+                <circle cx="10" cy="8" r="2.5" stroke="currentColor" stroke-width="1.5" />
               </svg>
               <span>Industrial Area, Phase-2, New Delhi, India</span>
             </div>
@@ -1017,12 +1120,14 @@
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Tell us about your requirements..." required></textarea>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your requirements..."
+                required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
               Send Enquiry
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
               </svg>
             </button>
           </form>
@@ -1039,7 +1144,8 @@
           <div class="nav-logo">
             <img src="images/logo.jpg" alt="RG Metals — Premium Quality Hardware" class="footer-logo-img">
           </div>
-          <p class="footer-desc">Premium door hardware and accessories. Trusted by professionals and homeowners across India since 2005.</p>
+          <p class="footer-desc">Premium door hardware and accessories. Trusted by professionals and homeowners across
+            India since 2005.</p>
         </div>
         <div class="footer-links-group">
           <h4>Products</h4>
@@ -1067,13 +1173,22 @@
         <p>&copy; 2026 RG Metals. All rights reserved.</p>
         <div class="footer-socials">
           <a href="#" aria-label="Facebook">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+            </svg>
           </a>
           <a href="#" aria-label="Instagram">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="5" />
+              <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
+            </svg>
           </a>
           <a href="#" aria-label="LinkedIn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z" />
+            </svg>
           </a>
         </div>
       </div>
@@ -1085,18 +1200,18 @@
     <div class="modal-content">
       <button class="modal-close" id="modal-close-btn" onclick="closeModal()" aria-label="Close modal">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
       </button>
       <div class="modal-body">
         <div class="modal-image" id="modal-image-container">
           <div class="product-image-placeholder large">
             <svg width="120" height="120" viewBox="0 0 80 80" fill="none" opacity="0.3">
-              <rect x="10" y="15" width="24" height="50" rx="3" stroke="currentColor" stroke-width="2"/>
-              <rect x="46" y="15" width="24" height="50" rx="3" stroke="currentColor" stroke-width="2"/>
-              <circle cx="40" cy="30" r="4" fill="currentColor"/>
-              <circle cx="40" cy="42" r="4" fill="currentColor"/>
-              <circle cx="40" cy="54" r="4" fill="currentColor"/>
+              <rect x="10" y="15" width="24" height="50" rx="3" stroke="currentColor" stroke-width="2" />
+              <rect x="46" y="15" width="24" height="50" rx="3" stroke="currentColor" stroke-width="2" />
+              <circle cx="40" cy="30" r="4" fill="currentColor" />
+              <circle cx="40" cy="42" r="4" fill="currentColor" />
+              <circle cx="40" cy="54" r="4" fill="currentColor" />
             </svg>
             <span>Product Image</span>
           </div>
@@ -1122,4 +1237,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

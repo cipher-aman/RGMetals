@@ -517,7 +517,43 @@ input, textarea {
   background: var(--clr-border);
 }
 
-/* --- 3D Floating Tower Bolt (based on towerbolt_5.jpg — two-tone design) --- */
+/* --- APPROACH 1: Image-Based 3D Floating Element --- */
+.floating-bolt-image-wrapper {
+  width: 280px;
+  height: 380px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: floatBolt 6s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-glass-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.5),
+    inset 0 0 20px rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.floating-bolt-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  filter: contrast(1.05) drop-shadow(0 10px 15px rgba(0,0,0,0.4));
+}
+
+/* --- APPROACH 2: 3D Floating Tower Bolt (Photorealistic CSS) --- */
 .hero-3d-element {
   flex: 0 0 auto;
   perspective: 1000px;
@@ -543,54 +579,71 @@ input, textarea {
   75% { transform: rotateY(-5deg) rotateX(-5deg) translateY(-20px); }
 }
 
-/* Base Plate — matte brushed silver (two-tone: base is matte, rod is polished) */
+/* Base Plate — Photorealistic brushed silver */
 .bolt-base-plate {
-  width: 100px;
-  height: 320px;
-  background: linear-gradient(145deg, #b0b0b0 0%, #8a8a8a 20%, #a0a0a0 50%, #909090 80%, #b5b5b5 100%);
+  width: 110px;
+  height: 340px;
+  background: linear-gradient(105deg, 
+    #7a7a7a 0%, 
+    #a8a8a8 15%, 
+    #d4d4d4 25%, 
+    #a8a8a8 45%, 
+    #8c8c8c 65%, 
+    #b0b0b0 85%, 
+    #7a7a7a 100%);
   border-radius: 8px;
   position: relative;
   box-shadow:
-    inset 0 2px 6px rgba(255,255,255,0.25),
-    inset 0 -2px 6px rgba(0,0,0,0.2),
-    6px 8px 28px rgba(0,0,0,0.45),
-    -3px -3px 12px rgba(255,255,255,0.05);
+    inset 2px 2px 4px rgba(255,255,255,0.6),
+    inset -3px -3px 6px rgba(0,0,0,0.4),
+    inset 0 0 10px rgba(0,0,0,0.1),
+    10px 15px 35px rgba(0,0,0,0.6),
+    -2px -2px 10px rgba(255,255,255,0.05);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+/* Brushed metal texture overlay */
 .bolt-base-plate::before {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: 8px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 50%, rgba(0,0,0,0.06) 100%);
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.03) 2px,
+    rgba(255, 255, 255, 0.03) 4px
+  );
   pointer-events: none;
 }
 
-/* Screw Holes */
+/* Photorealistic Screw Holes */
 .bolt-screw-hole {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  background: radial-gradient(circle, #2a2a2a 0%, #4a4a4a 50%, #3a3a3a 100%);
+  background: radial-gradient(circle, #1a1a1a 0%, #333 40%, #555 100%);
   box-shadow:
-    inset 0 2px 4px rgba(0,0,0,0.6),
-    0 1px 2px rgba(255,255,255,0.15);
+    inset 2px 2px 5px rgba(0,0,0,0.8),
+    inset -1px -1px 2px rgba(255,255,255,0.3),
+    0 1px 1px rgba(255,255,255,0.4);
   position: absolute;
 }
 
 .bolt-screw-hole::after {
   content: '';
   position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 4px;
-  height: 4px;
-  background: radial-gradient(circle, #666, #444);
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #555 0%, #222 100%);
   border-radius: 50%;
+  box-shadow: inset 1px 1px 2px rgba(255,255,255,0.2);
 }
 
 .bolt-screw-hole::before {
@@ -598,11 +651,13 @@ input, textarea {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(30deg);
-  width: 8px;
-  height: 1.5px;
-  background: rgba(0,0,0,0.4);
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 10px;
+  height: 2px;
+  background: rgba(0,0,0,0.8);
   border-radius: 1px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  z-index: 1;
 }
 
 .bolt-screw-hole.top-left { top: 20px; left: 16px; }
@@ -612,38 +667,40 @@ input, textarea {
 
 /* Square Top Cap */
 .bolt-top-cap {
-  width: 26px;
-  height: 18px;
-  background: linear-gradient(145deg, #c8c8c8 0%, #999 40%, #b8b8b8 100%);
-  border-radius: 3px;
+  width: 32px;
+  height: 22px;
+  background: linear-gradient(to bottom, #d4d4d4 0%, #8c8c8c 50%, #5a5a5a 100%);
+  border-radius: 4px 4px 2px 2px;
   position: absolute;
-  top: 38px;
+  top: 35px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 4;
   box-shadow:
-    inset 0 2px 3px rgba(255,255,255,0.3),
-    inset 0 -1px 2px rgba(0,0,0,0.2),
-    0 2px 6px rgba(0,0,0,0.3);
+    inset 0 2px 4px rgba(255,255,255,0.8),
+    inset 0 -1px 2px rgba(0,0,0,0.5),
+    0 4px 8px rgba(0,0,0,0.5);
 }
 
-/* Bolt Channel / Guide Rails */
+/* Recessed Bolt Channel */
 .bolt-channel {
-  width: 44px;
-  height: 200px;
-  background: linear-gradient(90deg, #888 0%, #777 15%, #999 50%, #777 85%, #888 100%);
+  width: 48px;
+  height: 210px;
+  background: linear-gradient(90deg, #333 0%, #111 20%, #444 50%, #111 80%, #333 100%);
   border-radius: 6px;
   position: relative;
   box-shadow:
-    inset 0 3px 6px rgba(0,0,0,0.4),
-    inset 0 -2px 4px rgba(255,255,255,0.08);
+    inset 3px 3px 8px rgba(0,0,0,0.8),
+    inset -2px -2px 5px rgba(255,255,255,0.15),
+    0 1px 1px rgba(255,255,255,0.4);
   display: flex;
   align-items: flex-start;
   justify-content: center;
   overflow: visible;
-  margin-top: -10px;
+  margin-top: -12px;
 }
 
+/* Inner channel groove detail */
 .bolt-channel::before {
   content: '';
   position: absolute;
@@ -652,25 +709,31 @@ input, textarea {
   transform: translateX(-50%);
   width: 24px;
   height: calc(100% - 8px);
-  background: linear-gradient(180deg, #444 0%, #3a3a3a 50%, #4a4a4a 100%);
+  background: linear-gradient(180deg, #222 0%, #111 50%, #2a2a2a 100%);
   border-radius: 3px;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.6);
 }
 
-/* Bolt Rod — polished chrome (high contrast shine) */
+/* Bolt Rod — highly polished chrome cylinder */
 .bolt-rod {
-  width: 20px;
-  height: 120px;
-  background: linear-gradient(90deg, #e8e8e8 0%, #c0c0c0 20%, #f4f4f4 45%, #ddd 55%, #c8c8c8 80%, #e0e0e0 100%);
-  border-radius: 5px;
+  width: 24px;
+  height: 140px;
+  background: linear-gradient(90deg, 
+    #333 0%, 
+    #888 10%, 
+    #fff 30%, 
+    #eee 40%, 
+    #666 70%, 
+    #ddd 85%, 
+    #222 100%);
+  border-radius: 12px;
   position: relative;
   z-index: 2;
   box-shadow:
-    0 4px 12px rgba(0,0,0,0.3),
-    inset 2px 0 3px rgba(255,255,255,0.4),
-    inset -2px 0 3px rgba(0,0,0,0.1);
-  margin-top: 8px;
-  animation: slideRod 4s ease-in-out infinite;
+    5px 0 15px rgba(0,0,0,0.6),
+    inset 0 2px 5px rgba(255,255,255,0.8);
+  margin-top: 10px;
+  animation: slideRod 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 @keyframes slideRod {
@@ -679,7 +742,7 @@ input, textarea {
   60% { transform: translateY(60px); }
 }
 
-/* Knob Assembly — cylindrical knob protruding to the right */
+/* Knob Assembly */
 .bolt-knob-assembly {
   position: absolute;
   top: 168px;
@@ -688,7 +751,7 @@ input, textarea {
   z-index: 5;
   display: flex;
   align-items: center;
-  animation: slideKnob 4s ease-in-out infinite;
+  animation: slideKnob 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 @keyframes slideKnob {
@@ -697,27 +760,31 @@ input, textarea {
   60% { top: 228px; }
 }
 
-/* Knob shaft — connects to the rod */
+/* Knob shaft — polished cylinder connecting to rod */
 .bolt-knob-shaft {
-  width: 30px;
-  height: 14px;
-  background: linear-gradient(180deg, #d8d8d8 0%, #b0b0b0 50%, #c8c8c8 100%);
-  border-radius: 3px;
+  width: 35px;
+  height: 18px;
+  background: linear-gradient(180deg, 
+    #333 0%, 
+    #aaa 20%, 
+    #fff 45%, 
+    #888 70%, 
+    #222 100%);
   box-shadow:
-    0 2px 6px rgba(0,0,0,0.3),
-    inset 0 1px 2px rgba(255,255,255,0.25);
+    0 8px 15px rgba(0,0,0,0.6),
+    inset 2px 0 5px rgba(255,255,255,0.5);
 }
 
-/* Knob head — polished chrome cylinder */
+/* Knob head — round polished chrome */
 .bolt-knob-head {
-  width: 28px;
-  height: 28px;
-  background: linear-gradient(145deg, #e8e8e8 0%, #c0c0c0 30%, #f0f0f0 50%, #ccc 70%, #ddd 100%);
+  width: 34px;
+  height: 34px;
+  background: radial-gradient(circle at 30% 30%, #fff 0%, #aaa 30%, #444 70%, #111 100%);
   border-radius: 50%;
   box-shadow:
-    0 4px 12px rgba(0,0,0,0.35),
-    inset 0 2px 4px rgba(255,255,255,0.4),
-    inset 0 -2px 3px rgba(0,0,0,0.15);
+    -2px 4px 10px rgba(0,0,0,0.5),
+    inset -2px -2px 6px rgba(0,0,0,0.4),
+    inset 2px 2px 6px rgba(255,255,255,0.8);
 }
 
 /* --- Fade In Animation --- */
